@@ -1,0 +1,95 @@
+#wrap {
+  height: 100vh;
+  width: auto;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  color: #f6f6f6;
+  background-color: #1b1b1b;
+}
+
+.text {
+  margin: 1.5em 0;
+  font-size: 3rem;
+}
+
+h1 {
+  animation: pulsate 2.5s infinite alternate;
+}
+
+h2 {
+  opacity: 0;
+}
+
+.start-button {
+  margin: 5em 0;
+  color: #f6f6f6;
+  background-color: transparent;
+  border: #f6f6f6 3px solid;
+  border-radius: 15px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff, 0 0 82px #fff;
+}
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa,
+      0 0 90px #0fa;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0fa, 0 0 35px #0fa,
+      0 0 45px #0fa, 0 0 60px #0fa, 0 0 70px #0fa;
+  }
+}
+
+.start-button:hover {
+  animation: pulsate 2.5s infinite alternate;
+}
+
+.circles {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  row-gap: 5em;
+  column-gap: 4em;
+}
+
+.button {
+  border: #f6f6f6 3px solid;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  position: relative;
+}
+
+
+#yellow {
+  background-color: yellow;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem white, 0 0 2.8rem yellow,
+    inset 0 0 1.3rem yellow;
+}
+
+#blue {
+  background-color: blue;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem white, 0 0 2.8rem blue,
+    inset 0 0 1.3rem blue;
+}
+
+#red {
+  background-color: red;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem white, 0 0 2.8rem red,
+    inset 0 0 1.3rem red;
+}
+
+#green {
+  background-color: green;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 0.8rem white, 0 0 2.8rem green,
+    inset 0 0 1.3rem green;
+}
+
+.game-over {
+  display:none;
+}
